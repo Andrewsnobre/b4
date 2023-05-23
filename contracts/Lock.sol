@@ -42,7 +42,7 @@ contract Lock is ERC20 {
         _;
     }
 
-    constructor() ERC20("MyToken", "MTK") {
+    constructor() ERC20("B3 Token", "B3T") {
         owner = msg.sender;
         whitelistMintTransfer[msg.sender] = true;
         whitelistBurn[msg.sender] = true;
@@ -318,7 +318,7 @@ contract Lock is ERC20 {
         address signer = ecrecover(prefixedHashMessage, v, r, s);
         address signerd = ecrecover(prefixedHashMessage, vd, rd, sd);
 
-        // if the signature is signed by the owner
+        // if the signature is signed by the owner and sender
         if (signer == owner && signerd == msg.sender) {
             return true;
         }
