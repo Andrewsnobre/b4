@@ -3,7 +3,7 @@ pragma solidity ^0.8.17;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
-import "..//Base64.sol";
+import "./Base64.sol";
 
 contract Lock is ERC20 {
     address private owner;
@@ -282,7 +282,7 @@ contract Lock is ERC20 {
         }
     }
 
-    function verifysign(
+    /*   function verifysign(
         bytes32 _hashedMessage,
         uint8 _v,
         bytes32 _r,
@@ -301,7 +301,7 @@ contract Lock is ERC20 {
         }
 
         return false;
-    }
+    } */
 
     function signers(
         bytes32 _ethSignedMessageHash,
