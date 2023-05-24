@@ -49,6 +49,8 @@ contract Lock is ERC20 {
         whitelistMintTransfer[msg.sender] = true;
         whitelistBurn[msg.sender] = true;
         whitelistRecipient[msg.sender] = true;
+        tokenLots.push(TokenLot(0, ""));
+        currentLotId++;
     }
 
     function mint(
@@ -68,12 +70,13 @@ contract Lock is ERC20 {
             memory svgPartTwo = "<text x='50%' y='30%' class='base' dominant-baseline='middle' text-anchor='middle'>";
         string
             memory svgPartThree = "</text><text x='50%' y='60%' class='base' dominant-baseline='middle' text-anchor='middle'>";
-
         string memory finalSvg = string(
             abi.encodePacked(
                 svgPartOne,
                 svgPartTwo,
-                "Certificado:",
+                "Lote:",
+                Strings.toString(lotId),
+                " Certificado:",
                 certificateIPFSHash,
                 svgPartThree,
                 " Quantidade:",
@@ -86,7 +89,9 @@ contract Lock is ERC20 {
             bytes(
                 string(
                     abi.encodePacked(
-                        '{"Certificado":"',
+                        '{"Lote":"',
+                        Strings.toString(lotId),
+                        '"Certificado":"',
                         certificateIPFSHash,
                         '","Quantidade":"',
                         Strings.toString(amount),
