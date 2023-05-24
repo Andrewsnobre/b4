@@ -54,7 +54,7 @@ describe("B3 Token", function () {
     expect(recipientBalance.toNumber()).to.equal(amount);
 
     // Verifique os detalhes do lote de tokens
-    const lotId = 0;
+    const lotId = 1;
     const [lotAmount, lotCertificateIPFSHash] = await myToken.getLotDetails(
       lotId
     );
