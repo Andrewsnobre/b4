@@ -1,6 +1,8 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("@openzeppelin/hardhat-upgrades");
 require("@nomiclabs/hardhat-solhint");
+require("hardhat-gas-reporter");
+require("solidity-coverage");
 require("dotenv").config();
 /** @type import('hardhat/config').HardhatUserConfig */
 
@@ -14,5 +16,13 @@ module.exports = {
   },
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,
+  },
+  gasReporter: {
+    currency: "USD",
+    gasPrice: 21,
+    enabled: true,
+  },
+  gasReporter: {
+    enabled: true,
   },
 };
