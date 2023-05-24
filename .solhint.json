@@ -7,6 +7,8 @@
     "func-visibility": ["warn", { "ignoreConstructors": true }],
     "compiler-version": ["error", "^0.8.5"],
     "no-global-import": "off",
-    "quotes": ["off", "double"]
+    "quotes": ["off", "double"],
+    "no-inline-assembly": "off",
+    "no-empty-blocks": "off"
   }
 }
