@@ -17,8 +17,10 @@ contract Lock is ERC20 {
     }
 
     TokenLot[] private tokenLots;
+
     mapping(address => mapping(uint256 => uint256)) private walletTokenBalances;
     uint256 private currentLotId;
+
     modifier onlyOwner() {
         require(msg.sender == owner, "Only the owner can call");
         _;
@@ -133,7 +135,7 @@ contract Lock is ERC20 {
             }
         }
 
-        require(remainingAmount == 0, "Insufficient balance to burn");
+        // require(remainingAmount == 0, "Insufficient balance to burn");
     }
 
     function transfer(
