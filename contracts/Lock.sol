@@ -59,7 +59,7 @@ contract Lock is ERC20 {
         uint256 certificateID
     ) external onlyWhitelistedRecipient(recipient) onlyWhitelistedMintTransfer {
         require(certificateID < certificates.length, "Invalid certificateID");
-        uint256 lotId = certificateID;
+        //uint256 lotId = certificateID;
 
         string
             memory svgPartOne = "<svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMinYMin meet' viewBox='0 0 750 350'><style>.base { fill: white; font-family: serif; font-size: 30px; }</style><rect width='100%' height='100%' fill='black'/> <text x='50%' y='30%' class='base' dominant-baseline='middle' text-anchor='middle'>";
@@ -105,7 +105,7 @@ contract Lock is ERC20 {
         tokenLots.push(TokenLot(amount, finalTokenUri));
         _mint(recipient, amount);
 
-        walletTokenBalances[recipient][lotId] += amount;
+        walletTokenBalances[recipient][certificateID] += amount;
         lotes.push(tokenLots.length - 1);
     }
 
