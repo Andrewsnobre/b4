@@ -18,8 +18,10 @@ describe("B3 Token", function () {
   it("deve permitir a transferência de tokens", async function () {
     const amount = 100;
 
+    await myToken.addtocertificate("Certificao 0");
+
     // Mint tokens para a conta do remetente
-    await myToken.mint(owner.address, amount, "hash123");
+    await myToken.mint(owner.address, amount, 0);
 
     // Adicione o endereço do destinatário à lista de permissões
     await myToken.addToWhitelistRecipient(recipient.address);
@@ -44,18 +46,17 @@ describe("B3 Token", function () {
     // Adicione o endereço do destinatário à lista de permissões
     await myToken.addToWhitelistRecipient(recipientAddress);
 
+    await myToken.addtocertificate("Certificao 0");
     // Chame a função "mint" para criar novos tokens
-    await myToken
-      .connect(owner)
-      .mint(recipientAddress, amount, certificateIPFSHash);
+    await myToken.connect(owner).mint(recipientAddress, amount, 0);
 
     // Verifique o saldo do destinatário após a mint
     const recipientBalance = await myToken.balanceOf(recipientAddress);
     expect(recipientBalance.toNumber()).to.equal(amount);
 
     // Verifique os detalhes do lote de tokens
-    const lotId = 1;
-    const [lotAmount, lotCertificateIPFSHash] = await myToken.getLotDetails(
+    const lotId = 0;
+    const [lotAmount, lotCertificateIPFSHash] = await myToken.LoteMintDetails(
       lotId
     );
     expect(lotAmount.toNumber()).to.equal(amount);
@@ -92,8 +93,9 @@ describe("B3 Token", function () {
   it("deve permitir a queima de tokens", async function () {
     const amount = 100;
 
+    await myToken.addtocertificate("Certificao 0");
     // Mint tokens para a conta do remetente
-    await myToken.mint(owner.address, amount, "hash123");
+    await myToken.mint(owner.address, amount, 0);
 
     // Chame a função "burn" para queimar tokens
     const messsage =
