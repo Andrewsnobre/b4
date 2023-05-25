@@ -46,16 +46,16 @@ describe("B3 Token", function () {
     // Adicione o endereço do destinatário à lista de permissões
     await myToken.addToWhitelistRecipient(recipientAddress);
 
-    await myToken.addtocertificate("Certificao 0");
+    await myToken.addtocertificate("Certificado A");
     // Chame a função "mint" para criar novos tokens
-    await myToken.connect(owner).mint(recipientAddress, amount, 0);
+    await myToken.connect(owner).mint(recipientAddress, amount, 1);
 
     // Verifique o saldo do destinatário após a mint
     const recipientBalance = await myToken.balanceOf(recipientAddress);
     expect(recipientBalance.toNumber()).to.equal(amount);
 
     // Verifique os detalhes do lote de tokens
-    const lotId = 0;
+    const lotId = 1;
     const [lotAmount, lotCertificateJson] = await myToken.loteMintDetails(
       lotId
     );
