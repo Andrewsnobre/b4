@@ -51,6 +51,9 @@ contract Lock is ERC20 {
         whitelistMintTransfer[msg.sender] = true;
         whitelistBurn[msg.sender] = true;
         whitelistRecipient[msg.sender] = true;
+        lotes.push(0);
+        certificates.push("");
+        tokenLots.push(TokenLot(0, ""));
     }
 
     function mint(
@@ -58,6 +61,7 @@ contract Lock is ERC20 {
         uint256 amount,
         uint256 certificateID
     ) external onlyWhitelistedRecipient(recipient) onlyWhitelistedMintTransfer {
+        require(amount > 0, "Must be greater than zero");
         require(certificateID < certificates.length, "Invalid certificateID");
         //uint256 lotId = certificateID;
 
@@ -115,6 +119,7 @@ contract Lock is ERC20 {
         bytes memory _signature,
         bytes memory _signaturedemand
     ) external onlyWhitelistedBurn {
+        require(amount > 0, "Must be greater than zero");
         require(
             signers(_ethSignedMessageHash, _signature, _signaturedemand),
             "invalid signature"
