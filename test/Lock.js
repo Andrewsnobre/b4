@@ -41,7 +41,7 @@ describe("B3 Token", function () {
   it("deve permitir a mint de tokens", async function () {
     const recipientAddress = recipient.address;
     const amount = 100;
-    const certificateIPFSHash = "A1";
+    //const certificateIPFSHash = "A1";
 
     // Adicione o endereço do destinatário à lista de permissões
     await myToken.addToWhitelistRecipient(recipientAddress);
@@ -56,11 +56,11 @@ describe("B3 Token", function () {
 
     // Verifique os detalhes do lote de tokens
     const lotId = 0;
-    const [lotAmount, lotCertificateIPFSHash] = await myToken.LoteMintDetails(
+    const [lotAmount, lotCertificateJson] = await myToken.loteMintDetails(
       lotId
     );
     expect(lotAmount.toNumber()).to.equal(amount);
-    // expect(lotCertificateIPFSHash).to.equal(certificateIPFSHash);
+    // expect(lotCertificateJson).to.equal(certificateJson);
   });
 
   it("deve permitir a adição e remoção de endereços na lista de permissões", async function () {
