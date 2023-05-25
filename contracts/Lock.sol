@@ -21,8 +21,8 @@ contract Lock is ERC20 {
     uint256[] private lotes;
 
     mapping(address => mapping(uint256 => uint256)) private walletTokenBalances;
-    //uint256 private currentLotId;
 
+    // Declaring  modifiers
     modifier onlyOwner() {
         require(msg.sender == owner, "Only the owner can call");
         _;
@@ -45,6 +45,9 @@ contract Lock is ERC20 {
         require(whitelistRecipient[recipient], "Recipient not whitelisted");
         _;
     }
+
+    // Declaring  events
+    event NewCertificate(address sender, string certificateName);
 
     constructor() ERC20("B3 Token", "B3T") {
         owner = msg.sender;
@@ -252,6 +255,7 @@ contract Lock is ERC20 {
     function addtocertificate(string memory newValue) public onlyOwner {
         certificates.push(newValue);
         tokenLots.push(TokenLot(0, newValue));
+        emit NewCertificate(msg.sender, newValue);
     }
 
     function loteMintDetails(
