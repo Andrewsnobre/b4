@@ -39,7 +39,7 @@ describe("B3 Token", function () {
   it("deve permitir a mint de tokens", async function () {
     const recipientAddress = recipient.address;
     const amount = 100;
-    const certificateIPFSHash = "hash123";
+    const certificateIPFSHash = "A1";
 
     // Adicione o endereço do destinatário à lista de permissões
     await myToken.addToWhitelistRecipient(recipientAddress);
