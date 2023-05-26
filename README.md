@@ -3,7 +3,7 @@
 
 O Projeto foi implementado de forma completa:<br/>
 O contrato foi implantado e verificado da rede polygon testnet(mumbai):<br/>
-0xce917084bd38ad325c319c6c111baf09f6652eda<br/>
+https://mumbai.polygonscan.com/address/0xce917084bd38ad325c319c6c111baf09f6652eda
 
 
 • É fungível: <br/>
