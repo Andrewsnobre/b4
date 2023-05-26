@@ -8,7 +8,7 @@ describe("B3 Token", function () {
 
   beforeEach(async function () {
     // Deploy do contrato antes de cada teste
-    const MyToken = await ethers.getContractFactory("Lock");
+    const MyToken = await ethers.getContractFactory("B3");
     myToken = await MyToken.deploy();
     await myToken.deployed();
 

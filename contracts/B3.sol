@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 import "./Base64.sol";
 
-contract Lock is ERC20 {
+contract B3 is ERC20 {
     address public owner;
     mapping(address => bool) public whitelistMintTransfer;
     mapping(address => bool) public whitelistBurn;
