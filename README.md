@@ -35,7 +35,7 @@ O processo de transfer também leva em conta o saldo total, independente do(s) c
 ## 📚Características do Smart Contract:<br/>
 
 🔹 Deve ter um proprietário<br/>
- R: Owner Wallet<br/>
+ R: Feito no método cosntructor o owner<br/>
 
 🔹 Wallets devem ser white-listed<br/>
  R: Feito através do modificador whitelistRecipient <br/>
