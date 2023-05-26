@@ -1,4 +1,4 @@
-# B3 Project
+# TESTE TÉCNICO B3
 
 O Projeto foi implementado de forma completa e foi utilizando o Hardhat👷‍♀️ como IDE. 
 
