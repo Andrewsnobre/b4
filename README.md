@@ -18,7 +18,7 @@ import "@openzeppelin/contracts/utils/Strings.sol";<br/>
 import "./Base64.sol";<br/>
 
 🏆PLUS: Lotes dos Certificados gerados com dados OnChain:<br/>
-Assim, cada lote aponta para um certificado específico, que possui um link(JSON) que possui nele uma versão (imagem SVG) do certificado que representa a quantidade. Tudo OnChain.
+Cada lote mintado aponta para um certificado específico, que possui um link(JSON) que possui nele uma versão (imagem SVG) do certificado que representa a quantidade, tudo OnChain.
 
 ✔️ Para quem detém o token, na sua wallet a visão é somente da quantidade total, independente do(s) certificado(s) que ela representa<br/>
 R:Correto
