@@ -50,10 +50,10 @@ O processo de transfer também leva em conta o saldo total, independente do(s) c
  R: Feito através do modificador whitelistBurn; <br/>
 
 🔹 O método Burn precisa da assinatura do demandante e do proprietário, sempre.<br/>
- R: Feito através da função Signers, onde verificamos as 2 assinaturas (demandante e do proprietário)<br/>
+ R: Feito através da função signers, onde verificamos as 2 assinaturas (demandante e do proprietário)<br/>
 
  🏆PLUS: Linguagem baixo nível YUL (Assembly):<br/>
-Usamos a linguagem YUL(assembly) para extrair o r,s,v, para checar a assinatura, e criamos um frontend sign.html para realizar as assinaturas.
+Usamos a linguagem YUL(assembly) para extrair o r,s,v, e checar as assinaturas. Criamos um frontend (sign.html) para realizar assinaturas.
 
 ## 🚨Testes implantados:<br/>
 
