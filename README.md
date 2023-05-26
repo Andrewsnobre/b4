@@ -1,8 +1,7 @@
 # B3 Project
 
 
-O Projeto foi implementado de forma completa:<br/>
-O Sistema foi desenvolvido utilizando o Hardhat.
+O Projeto foi implementado de forma completa utilizando o Hardhat como IDE. 
 
 
 ## Contract Addresses
