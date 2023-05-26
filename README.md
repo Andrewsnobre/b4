@@ -20,7 +20,7 @@ R: Foi implantado as bibliotecas Strings e Base64 para gerarmos a imagem do Cert
 Cada lote mintado aponta para um certificado específico, que possui um link(JSON) que possui nele uma versão (imagem SVG) do certificado que representa a quantidade, tudo OnChain.
 
 ✅ Para quem detém o token, na sua wallet a visão é somente da quantidade total, independente do(s) certificado(s) que ela representa<br/>
-R: Corretamente exibido.
+R: Corretamente exibido sempre o total na wallet, e para saber quanto possui de cada certificado criamos uma função (balanceOfCertificate).
 
 ✅ O processo de mint deve levar em conta o certificado do regulador<br/>
 R: O processo de mint solicita o certificado(ID) do regulador.<br/>
