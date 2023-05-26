@@ -66,4 +66,7 @@ Arquivo de teste:<br/>
     ✔️ deve permitir a queima de tokens<br/><br/><br/>   ![test](https://github.com/Andrewsnobre/b4/assets/11564122/421e87da-fa23-4a90-a58b-3c81fc7c8e9d)
    
 
+Copyright © 2023
+MIT licensed
 
+✨ Desenvolvido por Andrews Rodrigues ✨
