@@ -5,7 +5,7 @@ O Projeto foi implementado de forma completa  e foi utilizando o Hardhat como ID
 
 
 ## Contract Addresses
-O contrato foi implantado e verificado da rede polygon testnet(mumbai):<br/>
+O contrato foi implantado e seu código verificado da rede polygon testnet(mumbai):<br/>
 B3 Token address: [0xce917084bd38ad325c319c6c111baf09f6652eda](https://mumbai.polygonscan.com/address/0xce917084bd38ad325c319c6c111baf09f6652eda)
 <br/>
 
