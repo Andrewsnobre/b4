@@ -1,4 +1,4 @@
-# 🏆B3 Project
+## 🏆B3 Project
 
 O Projeto foi implementado de forma completa e foi utilizando o Hardhat como IDE. 
 
@@ -32,7 +32,7 @@ R: Feito, o processo de burn leva em conta o saldo total, independente do(s) cer
 
 ✔️O processo de transfer também leva em conta o saldo total, independente do(s) certificado(s) que ela representa e sempre tenta trasnferir o salto total de um certificado.<br/><br/>
 
-## Características do Smart Contract:<br/>
+## 📚Características do Smart Contract:<br/>
 
 🔹 Deve ter um proprietário<br/>
 R:Owner<br/>
