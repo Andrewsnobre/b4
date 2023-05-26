@@ -42,7 +42,7 @@ R:Owner<br/>
 R: Modificador whitelistRecipient <br/>
 
 🔹 Uma só wallet pode ter o acesso global a todas as funções<br/>
-R Owner Wallet<br/>
+R: Owner Wallet<br/>
 
 🔹 Um conjunto de wallets podem invocar os métodos Mint e Transfer<br/>
 R: modificador whitelistMintTransfer; <br/>
