@@ -3,7 +3,7 @@
 O Projeto foi implementado de forma completa e foi utilizando o Hardhat👷‍♀️ como IDE. 
 
 ## 👨‍💻Contract B3 Token (B3T)
-O contrato foi implantado e seu código foi verificado na rede polygon testnet(mumbai):<br/>
+O contrato foi implantado e seu código foi verificado na rede Polygon testnet(Mumbai):<br/>
 B3 Token address: [0xce917084bd38ad325c319c6c111baf09f6652eda](https://mumbai.polygonscan.com/address/0xce917084bd38ad325c319c6c111baf09f6652eda)
 <br/>
 
