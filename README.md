@@ -1,7 +1,7 @@
 # TESTE TÉCNICO B3
 
 O Projeto foi implementado de forma completa!🎉 atendendo todos os requisitos.  <br><br/>
-Foi utilizado o Hardhat👷‍♀️ para desenvolvimento do projeto.<br/>
+Foi utilizado o Hardhat👷‍♀️ para desenvolvimento do SmartContract.<br/>
 
 ## 👨‍💻Contract B3 Token (B3T)
 O contrato foi implantado e seu código foi verificado na rede Polygon testnet(Mumbai):<br/>
