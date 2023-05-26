@@ -41,7 +41,7 @@ O processo de transfer também leva em conta o saldo total, independente do(s) c
  R: Feito através do modificador whitelistRecipient. <br/>
 
 🔹 Uma só wallet pode ter o acesso global a todas as funções<br/>
- R: Feito através do modificador onlyOwne.r<br/>
+ R: Feito através do modificador onlyOwner.<br/>
 
 🔹 Um conjunto de wallets podem invocar os métodos Mint e Transfer<br/>
  R: Feito através do modificador whitelistMintTransfer. <br/>
