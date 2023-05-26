@@ -1,6 +1,6 @@
 # TESTE TÉCNICO B3
 
-O Projeto foi implementado de forma completa!🎉  <br><br/>
+O Projeto foi implementado de forma completa!🎉 atendendo todos os requisitos.  <br><br/>
 Foi utilizado para desenvolvimento do projeto o Hardhat👷‍♀️. <br/>
 
 ## 👨‍💻Contract B3 Token (B3T)
