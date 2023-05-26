@@ -13,9 +13,9 @@ B3 Token address: [0xce917084bd38ad325c319c6c111baf09f6652eda](https://mumbai.po
 
 
 ✅ Depende de uma entidade certificadora  que emite lotes de quantidades desse token, onde cada lote aponta para um certificado específico, para o qual essa quantidade precisa fazer link que contenha uma versão (imagem) do certificado que representa a quantidade<br/>
-R: Foi implantado as bibliotecas Strings e Base64 para gerarmos a imagem do Certificado que representa a quantidade de forma dinâmica em SVG- OnChain:<br/>
+R: Foi implantado as bibliotecas Strings e Base64 para gerarmos a imagem do Certificado que representa a quantidade de forma dinâmica em SVG.<br/>
 
-🏆PLUS: Lotes dos Certificados gerados com dados OnChain:<br/>
+🏆PLUS:Certificados gerados e armazenados OnChain:<br/>
 Cada lote mintado aponta para um certificado específico, que possui um link(JSON) que possui nele uma versão (imagem SVG) do certificado que representa a quantidade, tudo OnChain.
 
 ✅ Para quem detém o token, na sua wallet a visão é somente da quantidade total, independente do(s) certificado(s) que ela representa<br/>
