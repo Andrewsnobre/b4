@@ -17,7 +17,7 @@ B3 Token address: [0xce917084bd38ad325c319c6c111baf09f6652eda](https://mumbai.po
 R: Foi implantado as bibliotecas Strings e Base64 para gerarmos a imagem do Certificado que representa a quantidade de forma dinâmica em formato SVG.<br/>
 
 🏆PLUS:Certificados gerados dinamicamente e armazenados OnChain:<br/>
-Cada lote mintado aponta para um certificado específico, que possui um link(JSON) que possui nele uma versão (imagem SVG) do certificado que representa a quantidade, ou seja, a imagem do certificado (SVG) com a quantidade é gerado dinamicamente e armazenado tudo OnChain.
+Cada lote mintado aponta para um certificado específico, que possui um link(JSON) que possui nele uma versão (imagem SVG) do certificado que representa a quantidade, ou seja, a imagem do certificado (SVG) com a quantidade e seu tipo é gerado dinamicamente e armazenado tudo OnChain.
 
 ✅ Para quem detém o token, na sua wallet a visão é somente da quantidade total, independente do(s) certificado(s) que ela representa<br/>
 R: Corretamente exibido sempre o total na wallet, e para saber quanto possui de cada certificado criamos uma função (balanceOfCertificate).
