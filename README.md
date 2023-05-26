@@ -9,17 +9,17 @@ B3 Token address: [0xce917084bd38ad325c319c6c111baf09f6652eda](https://mumbai.po
 
 
 ✅ É fungível: <br/>
- R:Utilizamosa biblioteca ERC20(openzeppelin) devido o contrato ser fungível e todos o os tokens devem ser mostrados de forma total nas wallets, indepedenemente do seu certificado.<br/>
+ R: Utilizamos a biblioteca ERC20 (openzeppelin) devido o contrato ser fungível e todos o os tokens devem ser mostrados de forma total nas wallets, indepedenemente do seu certificado.<br/>
 
 
 ✅ Depende de uma entidade certificadora  que emite lotes de quantidades desse token, onde cada lote aponta para um certificado específico, para o qual essa quantidade precisa fazer link que contenha uma versão (imagem) do certificado que representa a quantidade<br/>
-R:Foi implantado as bibliotecas Strings e Base64 para gerarmos a imagem do Certificado de forma dinâmica em SVG- OnChain:<br/>
+R: Foi implantado as bibliotecas Strings e Base64 para gerarmos a imagem do Certificado de forma dinâmica em SVG- OnChain:<br/>
 
 🏆PLUS: Lotes dos Certificados gerados com dados OnChain:<br/>
 Cada lote mintado aponta para um certificado específico, que possui um link(JSON) que possui nele uma versão (imagem SVG) do certificado que representa a quantidade, tudo OnChain.
 
 ✅ Para quem detém o token, na sua wallet a visão é somente da quantidade total, independente do(s) certificado(s) que ela representa<br/>
-R:Correto
+R: Corretamente exibido.
 
 ✅ O processo de mint deve levar em conta o certificado do regulador<br/>
 R: O processo de mint solicita o certificado(ID) do regulador.<br/>
@@ -34,7 +34,7 @@ O processo de transfer também leva em conta o saldo total, independente do(s) c
 ## 📚Características do Smart Contract:<br/>
 
 🔹 Deve ter um proprietário<br/>
-R:Owner<br/>
+R: Owner<br/>
 
 🔹 Wallets devem ser white-listed<br/>
 R: Modificador whitelistRecipient <br/>
