@@ -14,7 +14,7 @@ B3 Token address: [0xce917084bd38ad325c319c6c111baf09f6652eda](https://mumbai.po
  R:Utilizamosa biblioteca ERC20(openzeppelin) abaixo devido o contrato ser fungível.<br/>
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";<br/>
 
-• Depende de uma entidade certificadora (reguladora) externa, que emite lotes de quantidades desse token onde Cada lote aponta para um certificado específico, para o qual essa quantidade precisa fazer link (utilizar IPFS ou outro definido pelo candidato) que contenha uma versão (imagem) do certificado que representa a quantidade<br/>
+• Depende de uma entidade certificadora  que emite lotes de quantidades desse token, onde cada lote aponta para um certificado específico, para o qual essa quantidade precisa fazer link que contenha uma versão (imagem) do certificado que representa a quantidade<br/>
 R:Foi implantado as bibliotecas Strings e Base64 para gerarmos a imagem do Certificado de forma dinâmica em SVG- OnChain:<br/>
 import "@openzeppelin/contracts/utils/Strings.sol";<br/>
 import "./Base64.sol";<br/>
