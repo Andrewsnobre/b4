@@ -58,10 +58,10 @@ Usamos a linguagem YUL(assembly) para extrair o r,s,v, para checar a assinatura,
 
 Linter: Solhint<br/>
 Arquivo de teste:<br/>
-    √ deve permitir a transferência de tokens<br/>
-    √ deve permitir a mint de tokens<br/>
-    √ deve permitir a adição e remoção de endereços na lista de permissões<br/>
-    √ deve permitir a queima de tokens<br/>
+    ✅ deve permitir a transferência de tokens<br/>
+    ✅ deve permitir a mint de tokens<br/>
+    ✅ deve permitir a adição e remoção de endereços na lista de permissões<br/>
+    ✅ deve permitir a queima de tokens<br/>
 ```shell
 
 ```
