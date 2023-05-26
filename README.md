@@ -1,6 +1,6 @@
 # B3 Project
 
-O Projeto foi implementado de forma completa e foi utilizando o Hardhat como IDE. 
+O Projeto foi implementado de forma completa e foi utilizando o Hardhat👷‍♀️ como IDE. 
 
 ## 👨‍💻Contract Addresses B3 Token (B3T)
 O contrato foi implantado e seu código verificado da rede polygon testnet(mumbai):<br/>
