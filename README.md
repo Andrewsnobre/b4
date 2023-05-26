@@ -19,7 +19,7 @@ R:Foi implantado as bibliotecas Strings e Base64 para gerarmos a imagem do Certi
 import "@openzeppelin/contracts/utils/Strings.sol";<br/>
 import "./Base64.sol";<br/>
 
-Assim, cada lote aponta para um certificado específico, para o qual essa quantidade precisa fazer link(JSON) que possui uma versão (imagem SVG) do certificado que representa a quantidade. Tudo OnChain.
+Assim, cada lote aponta para um certificado específico, que possui um link(JSON) que possui nele uma versão (imagem SVG) do certificado que representa a quantidade. Tudo OnChain.
 
 • Para quem detém o token, na sua wallet a visão é somente da quantidade total, independente do(s) certificado(s) que ela representa<br/>
 R:Correto
