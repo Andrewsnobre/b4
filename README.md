@@ -25,7 +25,9 @@ Assim, cada lote aponta para um certificado específico, que possui um link(JSON
 R:Correto
 
 • O processo de mint deve levar em conta o certificado do regulador<br/>
-R: O processo de mint solicita o certificado(ID) do regulador.
+R: O processo de mint solicita o certificado(ID) do regulador.<br/>:
+Foi feito uma lista para os certificados que usamos para serem "mintados os lotes".<br/>
+
 
 • O processo de burn deve levar em conta o saldo total, independente do(s) certificado(s) que ela representa mas tentando sempre queimar o salto total de um certificado quando possível. Dessa forma, se uma wallet tiver 100 tokens de um certificado A e 10 tokens de um certificado B e for solicitado um burn de 10 tokens, privilegiar queimar os 10 do certificado B.<br/>
 R: Feito, o processo de burn leva em conta o saldo total, independente do(s) certificado(s) que ela representa e sempre tenta queimar o salto total de um certificado antes.<br/>
