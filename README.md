@@ -50,7 +50,8 @@ R: modificador whitelistBurn; <br/>
 
 • O método Burn precisa da assinatura do demandante e do proprietário, sempre.<br/>
 R: Função Signers, onde solicita as 2 assinaturas (demandante e do proprietário)<br/>
-Usamos a linguagem YUL(assembly) para extrair o r,s,v, para checar a assinatura.
+Usamos a linguagem YUL(assembly) para extrair o r,s,v, para checar a assinatura, e criamos um frontend sign.html para realizar as assinaturas.
+
 
 Testes implantados:<br/>
 Linter: Solhint<br/>
