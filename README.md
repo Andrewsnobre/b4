@@ -17,7 +17,7 @@ R:Foi implantado as bibliotecas Strings e Base64 para gerarmos a imagem do Certi
 import "@openzeppelin/contracts/utils/Strings.sol";<br/>
 import "./Base64.sol";<br/>
 
-***PLUS: Lotes dos Certificados gerados com dados OnChain<br/>
+***PLUS: Lotes dos Certificados gerados com dados OnChain:<br/>
 Assim, cada lote aponta para um certificado específico, que possui um link(JSON) que possui nele uma versão (imagem SVG) do certificado que representa a quantidade. Tudo OnChain.
 
 ✔️ Para quem detém o token, na sua wallet a visão é somente da quantidade total, independente do(s) certificado(s) que ela representa<br/>
@@ -31,7 +31,7 @@ Foi feito uma lista de certificados usados para "mintar os lotes".<br/>
 ✔️O processo de burn deve levar em conta o saldo total, independente do(s) certificado(s) que ela representa mas tentando sempre queimar o salto total de um certificado quando possível. Dessa forma, se uma wallet tiver 100 tokens de um certificado A e 10 tokens de um certificado B e for solicitado um burn de 10 tokens, privilegiar queimar os 10 do certificado B.<br/>
 R: Feito, o processo de burn leva em conta o saldo total, independente do(s) certificado(s) que ela representa e sempre tenta queimar o salto total de um certificado antes.<br/>
 
-***PLUS: Transfer também tenta usar saldo total de token para tranferir<br/>
+***PLUS: Transfer também tenta usar saldo total de token para transferir:<br/>
 O processo de transfer também leva em conta o saldo total, independente do(s) certificado(s) que ela representa e sempre tenta trasnferir o salto total de um certificado.<br/><br/>
 
 ## 📚Características do Smart Contract:<br/>
@@ -54,7 +54,7 @@ R: modificador whitelistBurn; <br/>
 🔹 O método Burn precisa da assinatura do demandante e do proprietário, sempre.<br/>
 R: Função Signers, onde solicita as 2 assinaturas (demandante e do proprietário)<br/>
 
-***PLUS: Linguagem baixo nível YUL (Assembly) <br/>
+***PLUS: Linguagem baixo nível YUL (Assembly):<br/>
 Usamos a linguagem YUL(assembly) para extrair o r,s,v, para checar a assinatura, e criamos um frontend sign.html para realizar as assinaturas.
 
 ## 🚨Testes implantados:<br/>
