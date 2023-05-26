@@ -11,8 +11,8 @@ https://mumbai.polygonscan.com/address/0xce917084bd38ad325c319c6c111baf09f6652ed
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";<br/>
 
 • Depende de uma entidade certificadora (reguladora) externa, que emite lotes de quantidades desse token onde Cada lote aponta para um certificado específico, para o qual essa quantidade precisa fazer link (utilizar IPFS ou outro definido pelo candidato) que contenha uma versão (imagem) do certificado que representa a quantidade<br/>
-R:Foi implantado as bibliotecas Strings e Base64 para gerarmos a imagem do Certificado de forma dinâmica em SVG- OnChain:
-import "@openzeppelin/contracts/utils/Strings.sol";
+R:Foi implantado as bibliotecas Strings e Base64 para gerarmos a imagem do Certificado de forma dinâmica em SVG- OnChain:<br/>
+import "@openzeppelin/contracts/utils/Strings.sol";<br/>
 import "./Base64.sol";<br/>
 
 Assim, cada lote aponta para um certificado específico, para o qual essa quantidade precisa fazer link(JSON) que possui uma versão (imagem SVG) do certificado que representa a quantidade. Tudo OnChain.
