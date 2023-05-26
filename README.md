@@ -2,8 +2,12 @@
 
 
 O Projeto foi implementado de forma completa:<br/>
+
+
+## Contract Addresses
 O contrato foi implantado e verificado da rede polygon testnet(mumbai):<br/>
-https://mumbai.polygonscan.com/address/0xce917084bd38ad325c319c6c111baf09f6652eda
+B3 Token address: [0xce917084bd38ad325c319c6c111baf09f6652eda](https://mumbai.polygonscan.com/address/0xce917084bd38ad325c319c6c111baf09f6652eda)
+<br/>
 
 
 • É fungível: <br/>
