@@ -37,19 +37,19 @@ O processo de transfer também leva em conta o saldo total, independente do(s) c
 R: Owner<br/>
 
 🔹 Wallets devem ser white-listed<br/>
-R: Feito atavéns do modificador whitelistRecipient <br/>
+R: Feito através do modificador whitelistRecipient <br/>
 
 🔹 Uma só wallet pode ter o acesso global a todas as funções<br/>
-R: Feito atavéns do modificador onlyOwner Wallet<br/>
+R: Feito através do modificador onlyOwner Wallet<br/>
 
 🔹 Um conjunto de wallets podem invocar os métodos Mint e Transfer<br/>
-R: Feito atavéns do modificador whitelistMintTransfer; <br/>
+R: Feito através do modificador whitelistMintTransfer; <br/>
 
 🔹 Um outro conjunto (pode ser sobreposto) pode invocar o método Burn<br/>
-R: Feito atavéns do modificador whitelistBurn; <br/>
+R: Feito através do modificador whitelistBurn; <br/>
 
 🔹 O método Burn precisa da assinatura do demandante e do proprietário, sempre.<br/>
-R: Feito atavéns da função Signers, onde solicitamos as 2 assinaturas (demandante e do proprietário)<br/>
+R: Feito através da função Signers, onde solicitamos as 2 assinaturas (demandante e do proprietário)<br/>
 
  🏆PLUS: Linguagem baixo nível YUL (Assembly):<br/>
 Usamos a linguagem YUL(assembly) para extrair o r,s,v, para checar a assinatura, e criamos um frontend sign.html para realizar as assinaturas.
