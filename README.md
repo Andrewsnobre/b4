@@ -69,4 +69,4 @@ Arquivo de teste:<br/>
 Copyright © 2023
 MIT licensed
 
-✨ Desenvolvido por Andrews Rodrigues ✨
+✨ Desenvolvido por Andrews Rodrigues
