@@ -1,7 +1,7 @@
 # B3 Project
 
 
-O Projeto foi implementado de forma completa  e foi utilizando o Hardhat como IDE. 
+🏆 O Projeto foi implementado de forma completa e foi utilizando o Hardhat como IDE. 
 
 
 ## Contract Addresses B3 Token (B3T)
@@ -55,7 +55,7 @@ R: modificador whitelistBurn; <br/>
 R: Função Signers, onde solicita as 2 assinaturas (demandante e do proprietário)<br/>
 Usamos a linguagem YUL(assembly) para extrair o r,s,v, para checar a assinatura, e criamos um frontend sign.html para realizar as assinaturas.
 
-## Testes implantados:<br/>
+## 🚨Testes implantados:<br/>
 
 Linter: Solhint<br/>
 Arquivo de teste:<br/>
