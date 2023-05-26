@@ -2,6 +2,7 @@
 
 
 O Projeto foi implementado de forma completa:<br/>
+O Sistema foi desenvolvido utilizando o Hardhat.
 
 
 ## Contract Addresses
