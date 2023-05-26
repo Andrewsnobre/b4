@@ -9,7 +9,7 @@ B3 Token address: [0xce917084bd38ad325c319c6c111baf09f6652eda](https://mumbai.po
 
 
 ✔️ É fungível: <br/>
- R:Utilizamosa biblioteca ERC20(openzeppelin) abaixo devido o contrato ser fungível.<br/>
+ R:Utilizamosa biblioteca ERC20(openzeppelin) devido o contrato ser fungível e todos o os tokens devem ser mostrados de forma total nas wallets, indepedenemente do seu certificado.<br/>
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";<br/>
 
 ✔️Depende de uma entidade certificadora  que emite lotes de quantidades desse token, onde cada lote aponta para um certificado específico, para o qual essa quantidade precisa fazer link que contenha uma versão (imagem) do certificado que representa a quantidade<br/>
