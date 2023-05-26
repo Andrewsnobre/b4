@@ -18,10 +18,10 @@ describe("B3 Token", function () {
   it("deve permitir a transferência de tokens", async function () {
     const amount = 100;
 
-    await myToken.addtocertificate("Certificao 0");
+    await myToken.addtocertificate("Certificado A");
 
     // Mint tokens para a conta do remetente
-    await myToken.mint(owner.address, amount, 0);
+    await myToken.mint(owner.address, amount, 1);
 
     // Adicione o endereço do destinatário à lista de permissões
     await myToken.addToWhitelistRecipient(recipient.address);
@@ -93,9 +93,9 @@ describe("B3 Token", function () {
   it("deve permitir a queima de tokens", async function () {
     const amount = 100;
 
-    await myToken.addtocertificate("Certificao 0");
+    await myToken.addtocertificate("Certificao A");
     // Mint tokens para a conta do remetente
-    await myToken.mint(owner.address, amount, 0);
+    await myToken.mint(owner.address, amount, 1);
 
     // Chame a função "burn" para queimar tokens
     const messsage =
