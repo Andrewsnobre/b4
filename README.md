@@ -57,8 +57,8 @@ Usamos a linguagem YUL(assembly) para extrair o r,s,v, e checar as assinaturas. 
  
 ## 🚨Segurança e Testes implantados:<br/>
 
-⚠️**Proteção contra Replay Attack:**</BR>
-Em nosso contrato colocamos a proteção que evita que qualquer assinatura seja usada novamente, para isso usamos um nonce para proteção, [saiba mais sobre Replay Attack aqui.](https://celo.academy/t/solidity-vulnerabilities-signature-replay-attack/181)<br>
+⚠️**Proteção contra Signature  Replay Attack:**</BR>
+Em nosso contrato colocamos a proteção que evita que qualquer assinatura seja usada novamente, para isso usamos um nonce para proteção, [saiba mais sobre Signature Replay Attack aqui.](https://celo.academy/t/solidity-vulnerabilities-signature-replay-attack/181)<br>
 
 Utilizamos as seguinte ferramentas em nosso contrato abaixo:<br>
 
