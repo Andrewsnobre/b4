@@ -12,10 +12,10 @@ B3 Token address: [0x5472d826fd680ecc589decfacdfd5e88b3ac7b06](https://mumbai.po
  R: Utilizamos a biblioteca ERC20 (openzeppelin) devido o contrato ser fungível e todos o os tokens devem ser mostrados de forma total nas wallets, independentemente do seu certificado.<br/>
 
 
-✅ Depende de uma entidade certificadora  que emite lotes de quantidades desse token, onde cadalote aponta para um certificado específico, para o qual essa quantidade precisa fazer link que contenha uma versão (imagem) do certificado que representa a quantidade<br/>
+✅ Depende de uma entidade certificadora  que emite lotes de quantidades desse token, onde cada lote aponta para um certificado específico, para o qual essa quantidade precisa fazer link que contenha uma versão (imagem) do certificado que representa a quantidade<br/>
 R: Foi implantado as bibliotecas Strings e Base64 para gerarmos a imagem do Certificado que representa a quantidade de forma dinâmica em formato SVG.<br/>
 
-🏆PLUS:Imagens dos Certificados gerados dinamicamente e armazenados OnChain:<br/>
+🏆PLUS: Imagens dos Certificados gerados dinamicamente e armazenados OnChain:<br/>
 Cada lote mintado aponta para um certificado específico, que possui um link(JSON) que possui nele uma versão (imagem SVG) do certificado que representa a quantidade, ou seja, a imagem do certificado (SVG) com a quantidade e seu tipo é gerado dinamicamente e armazenado tudo OnChain.
 
 ✅ Para quem detém o token, na sua wallet a visão é somente da quantidade total, independente do(s) certificado(s) que ela representa<br/>
@@ -71,9 +71,6 @@ Podemos definir qualquer tipo de regra de monitoramento, abaixo um email que rec
 
 <br>
 
-
-
-
 [Solhint:](https://protofire.github.io/solhint/)<br/>
 ![solhint](https://github.com/Andrewsnobre/b4/assets/11564122/8a1909da-9487-4635-8640-e24203f42ea3)<br>
 Utilitário de linting para o código Solidity nos ajudar a seguir regras rígidas enquanto desenvolvemos nosso contrato inteligente. Essas regras são úteis tanto para seguir a melhor prática padrão de estilo de código quanto para aderir às melhores abordagens de segurança.<br>
@@ -87,8 +84,7 @@ Arquivo de teste unitário usando [Mocha](https://mochajs.org/) (B3secTest.js):<
     [Hardhat Gas Reporter:](https://www.npmjs.com/package/hardhat-gas-reporter)<br>
     Monitoramento dos custos em Gas e valores de cada função em Matic, com valores em USD pegos via API do site coinmarketcap.com.
 <br>
-![gas2](https://github.com/Andrewsnobre/b4/assets/11564122/9053f76d-86b1-4627-aada-4563b005faaa)
-    
+![gas2](https://github.com/Andrewsnobre/b4/assets/11564122/9053f76d-86b1-4627-aada-4563b005faaa)    
        
 
 Copyright © 2023
