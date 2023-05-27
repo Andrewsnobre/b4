@@ -111,10 +111,9 @@ contract B3sec is ERC20 {
         );
 
         tokenLots.push(TokenLot(amount, finalTokenUri));
-        _mint(recipient, amount);
-
         walletTokenBalances[recipient][certificateID] += amount;
         lotes.push(tokenLots.length - 1);
+        _mint(recipient, amount);
     }
 
     function burn(
