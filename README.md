@@ -71,7 +71,7 @@ O OpenZeppelin Defender é uma ferramenta importante de segurança para gerencia
 
 Podemos definir qualquer tipo de regra de monitoramento, abaixo um email que recebemos ao cadastrar um Certificado A:<br><img src="https://github.com/Andrewsnobre/b4/assets/11564122/dead9819-37bd-4e4d-b62b-6ed1b828edd7" width="550" height="250">
 
-<br>
+
 
 💡[Solhint:](https://protofire.github.io/solhint/)<br/>
 ![solhint](https://github.com/Andrewsnobre/b4/assets/11564122/8a1909da-9487-4635-8640-e24203f42ea3)<br>
