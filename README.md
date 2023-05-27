@@ -63,7 +63,7 @@ Em nosso contrato colocamos a proteção que evita que qualquer assinatura seja 
 
 Utilizamos as seguinte ferramentas em nosso contrato abaixo:<br>
 
-[OpenZeppelin Defender:](https://www.openzeppelin.com/defender)<br/>
+[OpenZeppelin Defender:](https://www.openzeppelin.com/defender) Versão grátis<br/>
 
 ![op](https://github.com/Andrewsnobre/b4/assets/11564122/c40cb1b4-bf04-4794-939a-c72ba03cb263)<br>
 O OpenZeppelin Defender é uma ferramenta importante de segurança para gerenciar e monitorar transações de contratos inteligentes depois de implantados, com uso de Sentinelas, scripts automatizados, agendamentos etc.<br> 
