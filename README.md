@@ -81,7 +81,7 @@ Criamos um arquivo de teste unitário usando Mocha (B3secTest.js):<br/>
     ✔️ deve permitir a transferência de tokens<br/>
     ✔️ deve permitir  mint de tokens<br/>
     ✔️ deve permitir a adição e remoção de endereços na lista de permissões<br/>
-    ✔️ deve permitir a queima de tokens<br/><br/>
+    ✔️ deve permitir a queima de tokens<br/>
     
    💸 [Hardhat Gas Reporter:](https://www.npmjs.com/package/hardhat-gas-reporter)<br>
     Monitoramento dos custos em Gas e valores de cada função em Matic, com valores em USD pegos via API do site coinmarketcap.com.
