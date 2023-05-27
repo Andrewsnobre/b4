@@ -1,0 +1,35 @@
+<button onClick="signMessage()">Sign Message</button>
+
+<script src="https://cdn.jsdelivr.net/npm/web3@1.7.3/dist/web3.min.js"></script>
+<script>
+  async function signMessage() {
+    if (!window.ethereum) return alert("Please Install Metamask");
+
+    // connect and get metamask account
+    const accounts = await ethereum.request({ method: "eth_requestAccounts" });
+
+    let web3 = new Web3(window.ethereum);
+    let nonce = await web3.eth.getTransactionCount(accounts[0]);
+    console.log(nonce);
+    // message to sign
+    const message = "hello" + nonce;
+    console.log({ message });
+
+    // hash message
+    const hashedMessage = web3.utils.sha3(message);
+    console.log({ hashedMessage });
+
+    // sign hashed message
+    const signature = await ethereum.request({
+      method: "personal_sign",
+      params: [hashedMessage, accounts[0]],
+    });
+    console.log({ signature });
+
+    // split signature
+    const r = signature.slice(0, 66);
+    const s = "0x" + signature.slice(66, 130);
+    const v = parseInt(signature.slice(130, 132), 16);
+    console.log({ r, s, v });
+  }
+</script>

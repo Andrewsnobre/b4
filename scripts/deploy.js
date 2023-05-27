@@ -12,6 +12,12 @@ async function main() {
 
   await lock.deployed();
   console.log(`Contract deployed to address: ${lock.address}`);
+
+  const B3Sec = await hre.ethers.getContractFactory("B3sec");
+  const B3sec = await B3Sec.deploy();
+
+  await B3sec.deployed();
+  console.log(`Contract deployed to address: ${B3sec.address}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
