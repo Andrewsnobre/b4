@@ -78,7 +78,7 @@ Utilitário de linting para o código Solidity nos ajudar a seguir regras rígid
 
 Arquivo de teste B3secTest.js:<br/>
     ✔️ deve permitir a transferência de tokens<br/>
-    ✔️ deve permitir a mint de tokens<br/>
+    ✔️ deve permitir  mint de tokens<br/>
     ✔️ deve permitir a adição e remoção de endereços na lista de permissões<br/>
     ✔️ deve permitir a queima de tokens<br/><br/><br/>   ![test](https://github.com/Andrewsnobre/b4/assets/11564122/421e87da-fa23-4a90-a58b-3c81fc7c8e9d)
    
