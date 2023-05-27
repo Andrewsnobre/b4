@@ -76,8 +76,6 @@ Podemos definir qualquer tipo de regra de monitoramento, abaixo um email que rec
 [Solhint:](https://protofire.github.io/solhint/)<br/>
 ![solhint](https://github.com/Andrewsnobre/b4/assets/11564122/8a1909da-9487-4635-8640-e24203f42ea3)<br>
 Utilitário de linting para o código Solidity nos ajudar a seguir regras rígidas enquanto desenvolvemos nosso contrato inteligente. Essas regras são úteis tanto para seguir a melhor prática padrão de estilo de código quanto para aderir às melhores abordagens de segurança.<br>
-
-
 Arquivo de teste unitário usando [Mocha](https://mochajs.org/) (B3secTest.js):<br/>
     ✔️ deve permitir a transferência de tokens<br/>
     ✔️ deve permitir  mint de tokens<br/>
