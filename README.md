@@ -1,4 +1,4 @@
-# TESTE TÉCNICO B3
+# 📝TESTE TÉCNICO B3
 
 O Projeto foi implementado de forma completa!🎉 atendendo todos os requisitos.  <br><br/>
 Foi utilizado o Hardhat👷‍♂️ para desenvolvimento do SmartContract.<br/>
@@ -9,7 +9,7 @@ B3 Token address: [0x5472d826fd680ecc589decfacdfd5e88b3ac7b06](https://mumbai.po
 <br/>
 
 ✅ É fungível: <br/>
- R: Utilizamos a biblioteca ERC20 (openzeppelin) devido o contrato ser fungível e todos o os tokens devem ser mostrados de forma total nas wallets, independentemente doseu certificado.<br/>
+ R: Utilizamos a biblioteca ERC20 (openzeppelin) devido o contrato ser fungível e todos o os tokens devem ser mostrados de forma total nas wallets, independentemente do seu certificado.<br/>
 
 
 ✅ Depende de uma entidade certificadora  que emite lotes de quantidades desse token, onde cadalote aponta para um certificado específico, para o qual essa quantidade precisa fazer link que contenha uma versão (imagem) do certificado que representa a quantidade<br/>
@@ -54,20 +54,43 @@ O processo de transfer também leva em conta o saldo total, independente do(s) c
 
  🏆PLUS: Linguagem baixo nível YUL (Assembly):<br/>
 Usamos a linguagem YUL(assembly) para extrair o r,s,v, e checar as assinaturas. Criamos um frontend para realizar assinaturas (signsec.html).
+ 
+## 🚨Segurança e Testes implantados:<br/>
 
-Proteção contra Replay Atack:</BR>
-Em nosso contrato colocamos a proteção que evita que qualquer assinatura seja usada novamente, para isso usamos um nonce para serem únicos, [veja mais aqui.](https://celo.academy/t/solidity-vulnerabilities-signature-replay-attack/181)
+⚠️**Proteção contra Replay Atack:**</BR>
+Em nosso contrato colocamos a proteção que evita que qualquer assinatura seja usada novamente, para isso usamos um nonce para proteção, [veja mais aqui.](https://celo.academy/t/solidity-vulnerabilities-signature-replay-attack/181)<br>
+
+Utilizamos as seguinte ferramentas em nosso contrato abaixo:<br>
+
+[OpenZeppelin Defender:](https://www.openzeppelin.com/defender) Versão grátis<br/>
+
+![op](https://github.com/Andrewsnobre/b4/assets/11564122/c40cb1b4-bf04-4794-939a-c72ba03cb263)<br>
+O OpenZeppelin Defender é uma ferramenta importante de segurança para gerenciar e monitorar transações de contratos inteligentes depois de implantados, com uso de Sentinelas, scripts automatizados, agendamentos etc.<br> 
+
+Podemos definir qualquer tipo de regra de monitoramento, abaixo um email que recebemos ao cadastrar um Certificado:<br><img src="https://github.com/Andrewsnobre/b4/assets/11564122/dead9819-37bd-4e4d-b62b-6ed1b828edd7" width="550" height="250">
+
+<br>
 
 
-## 🚨Testes implantados:<br/>
 
-Linter: Solhint<br/>
-Arquivo de teste:<br/>
+
+[Solhint:](https://protofire.github.io/solhint/)<br/>
+![solhint](https://github.com/Andrewsnobre/b4/assets/11564122/8a1909da-9487-4635-8640-e24203f42ea3)<br>
+Utilitário de linting para o código Solidity nos ajudar a seguir regras rígidas enquanto desenvolvemos nosso contrato inteligente. Essas regras são úteis tanto para seguir a melhor prática padrão de estilo de código quanto para aderir às melhores abordagens de segurança.<br>
+
+
+
+Arquivo de teste B3secTest.js:<br/>
     ✔️ deve permitir a transferência de tokens<br/>
-    ✔️ deve permitir a mint de tokens<br/>
+    ✔️ deve permitir  mint de tokens<br/>
     ✔️ deve permitir a adição e remoção de endereços na lista de permissões<br/>
-    ✔️ deve permitir a queima de tokens<br/><br/><br/>   ![test](https://github.com/Andrewsnobre/b4/assets/11564122/421e87da-fa23-4a90-a58b-3c81fc7c8e9d)
-   
+    ✔️ deve permitir a queima de tokens<br/><br/>
+    [Hardhat Gas Reporter:](https://www.npmjs.com/package/hardhat-gas-reporter)<br>
+    Monitoramente dos custos em Gas em Matic, com valores pegos do site coinmarketcap.com.
+<br>
+![gas2](https://github.com/Andrewsnobre/b4/assets/11564122/9053f76d-86b1-4627-aada-4563b005faaa)
+    
+       
 
 Copyright © 2023
 MIT licensed
