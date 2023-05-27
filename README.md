@@ -64,7 +64,9 @@ Utilizamos as seguinte ferramentas em nosso contrato abaixo:<br>
 
 [OpenZeppelin Defender:](https://www.openzeppelin.com/defender) Versão grátis<br/>
 
-![op](https://github.com/Andrewsnobre/b4/assets/11564122/c40cb1b4-bf04-4794-939a-c72ba03cb263)<br>
+<img src="https://github.com/Andrewsnobre/b4/assets/11564122/c40cb1b4-bf04-4794-939a-c72ba03cb263" width="300" >
+
+<br>
 O OpenZeppelin Defender é uma ferramenta importante de segurança para gerenciar e monitorar transações de contratos inteligentes depois de implantados, com uso de Sentinelas, scripts automatizados, agendamentos etc.<br> 
 
 Podemos definir qualquer tipo de regra de monitoramento, abaixo um email que recebemos ao cadastrar um Certificado A:<br><img src="https://github.com/Andrewsnobre/b4/assets/11564122/dead9819-37bd-4e4d-b62b-6ed1b828edd7" width="550" height="250">
