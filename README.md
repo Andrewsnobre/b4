@@ -3,9 +3,9 @@
 O Projeto foi implementado de forma completa!🎉 atendendo todos os requisitos.  <br><br/>
 Foi utilizado o Hardhat👷‍♂️ para desenvolvimento do SmartContract.<br/>
 
-## 👨‍💻Contract B3 Token (B3T)
+## 👨‍💻Contract B3sec Token (B3T)
 O contrato foi implantado e seu código foi verificado na Polygon testnet(Mumbai):<br/>
-B3 Token address: [0xce917084bd38ad325c319c6c111baf09f6652eda](https://mumbai.polygonscan.com/address/0xce917084bd38ad325c319c6c111af09f6652eda)
+B3 Token address: [0x5472d826fd680ecc589decfacdfd5e88b3ac7b06](https://mumbai.polygonscan.com/address/0x5472d826fd680ecc589decfacdfd5e88b3ac7b06)
 <br/>
 
 ✅ É fungível: <br/>
