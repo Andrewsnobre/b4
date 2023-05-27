@@ -84,8 +84,13 @@ Arquivo de teste B3secTest.js:<br/>
     ✔️ deve permitir a transferência de tokens<br/>
     ✔️ deve permitir  mint de tokens<br/>
     ✔️ deve permitir a adição e remoção de endereços na lista de permissões<br/>
-    ✔️ deve permitir a queima de tokens<br/><br/><br/>   ![test](https://github.com/Andrewsnobre/b4/assets/11564122/421e87da-fa23-4a90-a58b-3c81fc7c8e9d)
-   
+    ✔️ deve permitir a queima de tokens<br/><br/>
+    [Hardhat Gas Reporter:](https://www.npmjs.com/package/hardhat-gas-reporter)<br>
+    Monitoramente dos custos em Gas em Matic, com valores pegos do site coinmarketcap.com.
+<br>
+![gas2](https://github.com/Andrewsnobre/b4/assets/11564122/9053f76d-86b1-4627-aada-4563b005faaa)
+    
+       
 
 Copyright © 2023
 MIT licensed
