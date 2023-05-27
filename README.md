@@ -54,12 +54,11 @@ O processo de transfer também leva em conta o saldo total, independente do(s) c
 
  🏆PLUS: Linguagem baixo nível YUL (Assembly):<br/>
 Usamos a linguagem YUL(assembly) para extrair o r,s,v, e checar as assinaturas. Criamos um frontend para realizar assinaturas (signsec.html).
-
- ⚠️Proteção contra Replay Atack:</BR>
-Em nosso contrato colocamos a proteção que evita que qualquer assinatura seja usada novamente, para isso usamos um nonce para proteção, [veja mais aqui.](https://celo.academy/t/solidity-vulnerabilities-signature-replay-attack/181)
-
-
+ 
 ## 🚨Segurança e Testes implantados:<br/>
+
+⚠️Proteção contra Replay Atack:</BR>
+Em nosso contrato colocamos a proteção que evita que qualquer assinatura seja usada novamente, para isso usamos um nonce para proteção, [veja mais aqui.](https://celo.academy/t/solidity-vulnerabilities-signature-replay-attack/181)<br>
 
 Utilizamos as seguinte ferramentas em nosso contrato abaixo:<br>
 
