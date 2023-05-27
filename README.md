@@ -85,7 +85,7 @@ Arquivo de teste escrito usando [Mocha](https://mochajs.org/) (B3secTest.js):<br
     ✔️ deve permitir a adição e remoção de endereços na lista de permissões<br/>
     ✔️ deve permitir a queima de tokens<br/><br/>
     [Hardhat Gas Reporter:](https://www.npmjs.com/package/hardhat-gas-reporter)<br>
-    Monitoramente dos custos em Gas em Matic, com valores pegos do site coinmarketcap.com.
+    Monitoramente dos custos em Gas em Matic, com valores pegos via API do site coinmarketcap.com.
 <br>
 ![gas2](https://github.com/Andrewsnobre/b4/assets/11564122/9053f76d-86b1-4627-aada-4563b005faaa)
     
