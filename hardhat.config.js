@@ -21,8 +21,12 @@ module.exports = {
     currency: "USD",
     gasPrice: 21,
     enabled: true,
+    coinmarketcap: process.env.COIN_MARKETCAP_API_KEY || "",
+    token: "MATIC",
   },
   gasReporter: {
     enabled: true,
+    coinmarketcap: process.env.COIN_MARKETCAP_API_KEY || "",
+    token: "MATIC",
   },
 };
