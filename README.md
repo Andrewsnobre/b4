@@ -64,17 +64,18 @@ Em nosso contrato colocamos a proteção para evitar que qualquer assinatura sej
 
 :shipit: [OpenZeppelin Defender:](https://www.openzeppelin.com/defender) Versão grátis<br/>
 
-<img src="https://github.com/Andrewsnobre/b4/assets/11564122/c40cb1b4-bf04-4794-939a-c72ba03cb263" width="300" >
+<img src="https://github.com/Andrewsnobre/b4/assets/11564122/c40cb1b4-bf04-4794-939a-c72ba03cb263" width="450" >
 
 <br>
 O OpenZeppelin Defender é uma ferramenta importante de segurança para gerenciar e monitorar transações de contratos inteligentes depois de implantados, com uso de Sentinelas, scripts automatizados, agendamentos etc.<br> 
 
-Podemos definir qualquer tipo de regra de monitoramento, abaixo um email que recebemos ao cadastrar um Certificado A:<br><img src="https://github.com/Andrewsnobre/b4/assets/11564122/dead9819-37bd-4e4d-b62b-6ed1b828edd7" width="550" height="250">
+Podemos definir qualquer tipo de regra de monitoramento, abaixo um email que recebemos ao cadastrar um Certificado A:<br><img src="https://github.com/Andrewsnobre/b4/assets/11564122/dead9819-37bd-4e4d-b62b-6ed1b828edd7" width="450" height="200">
 
 
 
 💡[Solhint:](https://protofire.github.io/solhint/)<br/>
-![solhint](https://github.com/Andrewsnobre/b4/assets/11564122/8a1909da-9487-4635-8640-e24203f42ea3)<br>
+<img src="https://github.com/Andrewsnobre/b4/assets/11564122/8a1909da-9487-4635-8640-e24203f42ea3" width="450" height="100">
+<br>
 Utilitário de linting para o código Solidity nos ajudar a seguir regras rígidas enquanto desenvolvemos nosso contrato inteligente. Essas regras são úteis tanto para seguir a melhor prática padrão de estilo de código quanto para aderir às melhores abordagens de segurança.<br/><br/>
 🚦[Mocha](https://mochajs.org/)<br/>
 Criamos um arquivo de teste unitário usando Mocha (B3secTest.js):<br/>
