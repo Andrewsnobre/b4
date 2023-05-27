@@ -7,11 +7,11 @@
 const hre = require("hardhat");
 
 async function main() {
-  const Lock = await hre.ethers.getContractFactory("B3");
-  const lock = await Lock.deploy();
+  //const Lock = await hre.ethers.getContractFactory("B3");
+  // const lock = await Lock.deploy();
 
-  await lock.deployed();
-  console.log(`Contract deployed to address: ${lock.address}`);
+  //await lock.deployed();
+  //console.log(`Contract deployed to address: ${lock.address}`);
 
   const B3Sec = await hre.ethers.getContractFactory("B3sec");
   const B3sec = await B3Sec.deploy();
