@@ -4,16 +4,15 @@ O Projeto foi implementado de forma completa!🎉 atendendo todos os requisitos.
 Foi utilizado o Hardhat👷‍♂️ para desenvolvimento do SmartContract.<br/>
 
 ## 👨‍💻Contract B3 Token (B3T)
-O contrato foi implantado e seu código foi verificado na rede Polygon testnet(Mumbai):<br/>
-B3 Token address: [0xce917084bd38ad325c319c6c111baf09f6652eda](https://mumbai.polygonscan.com/address/0xce917084bd38ad325c319c6c111baf09f6652eda)
+O contrato foi implantado e seu código foi verificado na Polygon testnet(Mumbai):<br/>
+B3 Token address: [0xce917084bd38ad325c319c6c111baf09f6652eda](https://mumbai.polygonscan.com/address/0xce917084bd38ad325c319c6c111af09f6652eda)
 <br/>
 
-
 ✅ É fungível: <br/>
- R: Utilizamos a biblioteca ERC20 (openzeppelin) devido o contrato ser fungível e todos o os tokens devem ser mostrados de forma total nas wallets, independentemente do seu certificado.<br/>
+ R: Utilizamos a biblioteca ERC20 (openzeppelin) devido o contrato ser fungível e todos o os tokens devem ser mostrados de forma total nas wallets, independentemente doseu certificado.<br/>
 
 
-✅ Depende de uma entidade certificadora  que emite lotes de quantidades desse token, onde cada lote aponta para um certificado específico, para o qual essa quantidade precisa fazer link que contenha uma versão (imagem) do certificado que representa a quantidade<br/>
+✅ Depende de uma entidade certificadora  que emite lotes de quantidades desse token, onde cadalote aponta para um certificado específico, para o qual essa quantidade precisa fazer link que contenha uma versão (imagem) do certificado que representa a quantidade<br/>
 R: Foi implantado as bibliotecas Strings e Base64 para gerarmos a imagem do Certificado que representa a quantidade de forma dinâmica em formato SVG.<br/>
 
 🏆PLUS:Imagens dos Certificados gerados dinamicamente e armazenados OnChain:<br/>
@@ -54,7 +53,11 @@ O processo de transfer também leva em conta o saldo total, independente do(s) c
  R: Feito através da função signers, onde verificamos as 2 assinaturas (demandante e do proprietário).<br/>
 
  🏆PLUS: Linguagem baixo nível YUL (Assembly):<br/>
-Usamos a linguagem YUL(assembly) para extrair o r,s,v, e checar as assinaturas. Criamos um frontend para realizar assinaturas (sign.html).
+Usamos a linguagem YUL(assembly) para extrair o r,s,v, e checar as assinaturas. Criamos um frontend para realizar assinaturas (signsec.html).
+
+Proteção contra Replay Atack:</BR>
+Em nosso contrato colocamos a proteção que evita que qualquer assinatura seja usada novamente, para isso usamos um nonce para serem únicos, [veja mais aqui.](https://celo.academy/t/solidity-vulnerabilities-signature-replay-attack/181)
+
 
 ## 🚨Testes implantados:<br/>
 
