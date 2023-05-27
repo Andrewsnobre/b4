@@ -53,7 +53,7 @@ O processo de transfer também leva em conta o saldo total, independente do(s) c
  R: Feito através da função signers, onde verificamos as 2 assinaturas (demandante e do proprietário).<br/>
 
  🏆PLUS: Linguagem baixo nível YUL (Assembly):<br/>
-Usamos a linguagem YUL(assembly) para extrair o r,s,v, e checar as assinaturas. Criamos um frontend para realizar assinaturas (sign.html).
+Usamos a linguagem YUL(assembly) para extrair o r,s,v, e checar as assinaturas. Criamos um frontend para realizar assinaturas (signsec.html).
 
 Proteção contra Replay Atack:</BR>
 Em nosso contrato colocamos a proteção que evita que qualquer assinatura seja usada novamente, para isso usamos um nonce para serem únicos, [veja mais aqui.](https://celo.academy/t/solidity-vulnerabilities-signature-replay-attack/181)
