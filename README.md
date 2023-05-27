@@ -75,12 +75,14 @@ Podemos definir qualquer tipo de regra de monitoramento, abaixo um email que rec
 
 💡[Solhint:](https://protofire.github.io/solhint/)<br/>
 ![solhint](https://github.com/Andrewsnobre/b4/assets/11564122/8a1909da-9487-4635-8640-e24203f42ea3)<br>
-Utilitário de linting para o código Solidity nos ajudar a seguir regras rígidas enquanto desenvolvemos nosso contrato inteligente. Essas regras são úteis tanto para seguir a melhor prática padrão de estilo de código quanto para aderir às melhores abordagens de segurança.<br>
-Arquivo de teste unitário usando [Mocha](https://mochajs.org/) (B3secTest.js):<br/>
+Utilitário de linting para o código Solidity nos ajudar a seguir regras rígidas enquanto desenvolvemos nosso contrato inteligente. Essas regras são úteis tanto para seguir a melhor prática padrão de estilo de código quanto para aderir às melhores abordagens de segurança.<br/><br/>
+🚦[Mocha](https://mochajs.org/)<br/>
+Criamos um arquivo de teste unitário usando Mocha (B3secTest.js):<br/>
     ✔️ deve permitir a transferência de tokens<br/>
     ✔️ deve permitir  mint de tokens<br/>
     ✔️ deve permitir a adição e remoção de endereços na lista de permissões<br/>
     ✔️ deve permitir a queima de tokens<br/><br/>
+    
    💸 [Hardhat Gas Reporter:](https://www.npmjs.com/package/hardhat-gas-reporter)<br>
     Monitoramento dos custos em Gas e valores de cada função em Matic, com valores em USD pegos via API do site coinmarketcap.com.
 <br>
