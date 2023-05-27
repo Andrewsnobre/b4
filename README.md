@@ -53,7 +53,7 @@ O processo de transfer também leva em conta o saldo total, independente do(s) c
  R: Feito através da função signers, onde verificamos as 2 assinaturas (demandante e do proprietário).<br/>
 
  🏆PLUS: Linguagem baixo nível YUL (Assembly):<br/>
-Usamos a linguagem YUL(assembly) para extrair o r,s,v, e checar as assinaturas. <br/>Criamos um frontend para realizar assinaturas (signsec.html).
+Usamos a linguagem YUL(assembly) para extrair o r,s,v, e checar as assinaturas. <br/>Criamos um frontent para solicitar assinaturas (signsec.html).
  
 ## 🚨Segurança e Testes implantados:<br/>
 
