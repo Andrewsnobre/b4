@@ -9,7 +9,7 @@ B3 Token address: [0x5472d826fd680ecc589decfacdfd5e88b3ac7b06](https://mumbai.po
 <br/>
 
 ✅ É fungível: <br/>
- R: Utilizamos a biblioteca ERC20 (openzeppelin) devido o contrato ser fungível e todos o os tokens devem ser mostrados de forma total nas wallets, independentemente do seu certificado.<br/>
+ R: Utilizamos a biblioteca [ERC20 (openzeppelin)](https://docs.openzeppelin.com/contracts/3.x/erc20) devido o contrato ser fungível e todos os tokens devem ser mostrados de forma total nas wallets, independentemente do seu certificado, pois no [ERC1155](https://docs.openzeppelin.com/contracts/3.x/erc1155) as wallets mostram um saldo distinto para cada token id nas contas.<br/>
 
 
 ✅ Depende de uma entidade certificadora  que emite lotes de quantidades desse token, onde cada lote aponta para um certificado específico, para o qual essa quantidade precisa fazer link que contenha uma versão (imagem) do certificado que representa a quantidade<br/>
@@ -29,7 +29,7 @@ Também foi criada uma função(loteMintDetails) onde podemos consultar os detal
 ✅ O processo de burn deve levar em conta o saldo total, independente do(s) certificado(s) que ela representa mas tentando sempre queimar o salto total de um certificado quando possível. Dessa forma, se uma wallet tiver 100 tokens de um certificado A e 10 tokens de um certificado B e for solicitado um burn de 10 tokens, privilegiar queimar os 10 do certificado B.<br/>
 R: Feito, o processo de burn leva em conta o saldo total, independente do(s) certificado(s) que ela representa e sempre tenta queimar o saldo total de um certificado antes.<br/>
 
-🏆PLUS: Transfer também tenta usar saldo total de um certificado para transferir:<br/>
+🏆PLUS: O processo de transfer também tenta usar saldo total de um certificado antes:<br/>
 O processo de transfer também leva em conta o saldo total, independente do(s) certificado(s) que ela representa e sempre tenta transferir o saldo total de um certificado.<br/>
 
 ## 📚Características do Smart Contract:<br/>
@@ -78,14 +78,14 @@ Podemos definir qualquer tipo de regra de monitoramento, abaixo um email que rec
 <br>
 Utilitário de linting para o código Solidity nos ajudar a seguir regras rígidas enquanto desenvolvemos nosso contrato inteligente. Essas regras são úteis tanto para seguir a melhor prática padrão de estilo de código quanto para aderir às melhores abordagens de segurança.<br/><br/>
 🚦[Mocha:](https://mochajs.org/)<br/>
-Criamos um arquivo de teste unitário usando Mocha (B3secTest.js):<br/>
+Criamos um arquivo de teste unitário usando Mocha (B3secTest.js) para as principais funções:<br/>
     ✔️ deve permitir a transferência de tokens<br/>
     ✔️ deve permitir  mint de tokens<br/>
     ✔️ deve permitir a adição e remoção de endereços na lista de permissões<br/>
     ✔️ deve permitir a queima de tokens<br/>
     
    💸 [Hardhat Gas Reporter:](https://www.npmjs.com/package/hardhat-gas-reporter)<br>
-    Monitoramento dos custos em Gas e valores de cada função em Matic, com valores em USD pegos via API do site coinmarketcap.com.
+    Monitoramento dos custos em Gas e valores de cada função em Matic, com valores em USD pegos via API do site [Coinmarketcap](https://coinmarketcap.com). 
 <br>
 ![gas2](https://github.com/Andrewsnobre/b4/assets/11564122/9053f76d-86b1-4627-aada-4563b005faaa)    
        
