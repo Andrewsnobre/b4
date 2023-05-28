@@ -52,7 +52,7 @@ O processo de transfer também leva em conta o saldo total, independente do(s) c
 🔹 O método Burn precisa da assinatura do demandante e do proprietário, sempre.<br/>
  R: Feito através da função signers, onde verificamos as 2 assinaturas (demandante e do proprietário).<br/>
 
- 🏆PLUS: Linguagem baixo nível [YUL (Assembly)](https://docs.soliditylang.org/en/v0.8.17/yul.html) e [página para assinaturas:](https://ipfs.com.br/signsec4.html)<br/>
+ 🏆PLUS: Linguagem baixo nível [YUL (Assembly)](https://docs.soliditylang.org/en/v0.8.20/yul.html) e [página para assinaturas:](https://ipfs.com.br/signsec4.html)<br/>
 Usamos a linguagem YUL(assembly) para extrair o r,s,v, e checar as assinaturas. <br/>Criamos uma página(signsec.html) para solicitar assinaturas .
  
 ## 🚨Segurança e Testes implantados:<br/>
