@@ -85,7 +85,7 @@ Criamos um arquivo de teste unitário usando Mocha (B3secTest.js) para as princi
     ✔️ deve permitir a queima de tokens<br/>
     
    💸 [Hardhat Gas Reporter:](https://www.npmjs.com/package/hardhat-gas-reporter)<br>
-    Monitoramento dos custos em Gas e valores de cada função em Matic, com valores em USD pegos via API do site coinmarketcap.com.
+    Monitoramento dos custos em Gas e valores de cada função em Matic, com valores em USD pegos via API do site [Coinmarketcap](https://coinmarketcap.com). 
 <br>
 ![gas2](https://github.com/Andrewsnobre/b4/assets/11564122/9053f76d-86b1-4627-aada-4563b005faaa)    
        
