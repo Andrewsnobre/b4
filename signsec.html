@@ -1,8 +1,70 @@
-<button onClick="signMessage()">Sign Message</button>
+<button onClick="signMessageO()">Sign Message Owner</button><br /><br />
+<button onClick="signMessageD()">Sign Message Demandante</button>
+
+<br /><br />
+<button onClick="Burn()">Burn 2 tokens</button>
+
+<br />
+
+<center>
+  <table>
+    <tr>
+      <td>Message Owner:</td>
+      <td>
+        <input
+          type="text"
+          id="MO"
+          style="width: 600px"
+          class="form-control"
+          placeholder=""
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>Signature Owner:</td>
+      <td>
+        <input
+          type="text"
+          id="SO"
+          style="width: 600px"
+          class="form-control"
+          placeholder=""
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>Message Demandante:</td>
+      <td>
+        <input
+          type="text"
+          id="MD"
+          style="width: 600px"
+          class="form-control"
+          placeholder=""
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>Signature Demandante:</td>
+      <td>
+        <input
+          type="text"
+          id="SD"
+          style="width: 600px"
+          class="form-control"
+          placeholder=""
+        />
+      </td>
+    </tr>
+  </table>
+</center>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/web3@1.7.3/dist/web3.min.js"></script>
+
 <script>
-  async function signMessage() {
+  async function signMessageO() {
     if (!window.ethereum) return alert("Please Install Metamask");
 
     // connect and get metamask account
@@ -11,8 +73,12 @@
     let web3 = new Web3(window.ethereum);
     let nonce = await web3.eth.getTransactionCount(accounts[0]);
     console.log(nonce);
+
+    let random = Math.random().toString(20).toString("hex").substring(2);
+    console.log(random);
+
     // message to sign
-    const message = "hello" + nonce;
+    const message = "hello" + nonce + random;
     console.log({ message });
 
     // hash message
@@ -31,5 +97,448 @@
     const s = "0x" + signature.slice(66, 130);
     const v = parseInt(signature.slice(130, 132), 16);
     console.log({ r, s, v });
+
+    var textFieldMO = $("#MO");
+    textFieldMO.val(hashedMessage);
+
+    var textFieldSO = $("#SO");
+    textFieldSO.val(signature);
+  }
+</script>
+
+<script>
+  async function signMessageD() {
+    if (!window.ethereum) return alert("Please Install Metamask");
+
+    // connect and get metamask account
+    const accounts = await ethereum.request({ method: "eth_requestAccounts" });
+
+    let web3 = new Web3(window.ethereum);
+    let nonce = await web3.eth.getTransactionCount(accounts[0]);
+    console.log(nonce);
+
+    let random = Math.random().toString(20).toString("hex").substring(2);
+    console.log(random);
+
+    // message to sign
+    const message = "hello" + nonce + random;
+    console.log({ message });
+
+    // hash message
+    const hashedMessage = web3.utils.sha3(message);
+    console.log({ hashedMessage });
+
+    // sign hashed message
+    const signature = await ethereum.request({
+      method: "personal_sign",
+      params: [hashedMessage, accounts[0]],
+    });
+    console.log({ signature });
+
+    // split signature
+    const r = signature.slice(0, 66);
+    const s = "0x" + signature.slice(66, 130);
+    const v = parseInt(signature.slice(130, 132), 16);
+    console.log({ r, s, v });
+
+    var textFieldMD = $("#MD");
+    textFieldMD.val(hashedMessage);
+
+    var textFieldSD = $("#SD");
+    textFieldSD.val(signature);
+  }
+</script>
+
+<script>
+  async function Burn() {
+    if (!window.ethereum) return alert("Please Install Metamask");
+
+    // connect and get metamask account
+    const accounts = await ethereum.request({ method: "eth_requestAccounts" });
+
+    let web3 = new Web3(window.ethereum);
+    let nonce = await web3.eth.getTransactionCount(accounts[0]);
+    console.log(nonce);
+
+    web3.eth.getAccounts().then(console.log);
+    //contract = new web3.eth.Contract(<contract Abi>, <contract address>);
+
+    ContractB3 = new web3.eth.Contract(
+      [
+        { inputs: [], stateMutability: "nonpayable", type: "constructor" },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "owner",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "address",
+              name: "spender",
+              type: "address",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "value",
+              type: "uint256",
+            },
+          ],
+          name: "Approval",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "address",
+              name: "sender",
+              type: "address",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "certificateName",
+              type: "string",
+            },
+          ],
+          name: "NewCertificate",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "from",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "address",
+              name: "to",
+              type: "address",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "value",
+              type: "uint256",
+            },
+          ],
+          name: "Transfer",
+          type: "event",
+        },
+        {
+          inputs: [
+            { internalType: "address", name: "wallet", type: "address" },
+          ],
+          name: "addToWhitelistRecipient",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            { internalType: "address", name: "wallet", type: "address" },
+          ],
+          name: "addWhitelistedBurn",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            { internalType: "address", name: "wallet", type: "address" },
+          ],
+          name: "addWhitelistedMintTransfer",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            { internalType: "string", name: "newValue", type: "string" },
+          ],
+          name: "addtocertificate",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            { internalType: "address", name: "owner", type: "address" },
+            { internalType: "address", name: "spender", type: "address" },
+          ],
+          name: "allowance",
+          outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            { internalType: "address", name: "spender", type: "address" },
+            { internalType: "uint256", name: "amount", type: "uint256" },
+          ],
+          name: "approve",
+          outputs: [{ internalType: "bool", name: "", type: "bool" }],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            { internalType: "address", name: "account", type: "address" },
+          ],
+          name: "balanceOf",
+          outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            { internalType: "address", name: "account", type: "address" },
+            { internalType: "uint256", name: "certificadeID", type: "uint256" },
+          ],
+          name: "balanceOfCertificate",
+          outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            { internalType: "uint256", name: "amount", type: "uint256" },
+            {
+              internalType: "bytes32",
+              name: "_ethSignedMessageHash",
+              type: "bytes32",
+            },
+            {
+              internalType: "bytes32",
+              name: "_ethSignedMessageHashd",
+              type: "bytes32",
+            },
+            { internalType: "bytes", name: "_signature", type: "bytes" },
+            { internalType: "bytes", name: "_signaturedemand", type: "bytes" },
+          ],
+          name: "burn",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+          name: "certificates",
+          outputs: [{ internalType: "string", name: "", type: "string" }],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "decimals",
+          outputs: [{ internalType: "uint8", name: "", type: "uint8" }],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            { internalType: "address", name: "spender", type: "address" },
+            {
+              internalType: "uint256",
+              name: "subtractedValue",
+              type: "uint256",
+            },
+          ],
+          name: "decreaseAllowance",
+          outputs: [{ internalType: "bool", name: "", type: "bool" }],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            { internalType: "address", name: "spender", type: "address" },
+            { internalType: "uint256", name: "addedValue", type: "uint256" },
+          ],
+          name: "increaseAllowance",
+          outputs: [{ internalType: "bool", name: "", type: "bool" }],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [{ internalType: "uint256", name: "lotId", type: "uint256" }],
+          name: "loteMintDetails",
+          outputs: [
+            { internalType: "uint256", name: "", type: "uint256" },
+            { internalType: "string", name: "", type: "string" },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            { internalType: "address", name: "recipient", type: "address" },
+            { internalType: "uint256", name: "amount", type: "uint256" },
+            { internalType: "uint256", name: "certificateID", type: "uint256" },
+          ],
+          name: "mint",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "name",
+          outputs: [{ internalType: "string", name: "", type: "string" }],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "owner",
+          outputs: [{ internalType: "address", name: "", type: "address" }],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            { internalType: "address", name: "wallet", type: "address" },
+          ],
+          name: "removeFromWhitelistRecipient",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            { internalType: "address", name: "wallet", type: "address" },
+          ],
+          name: "removeWhitelistedBurn",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            { internalType: "address", name: "wallet", type: "address" },
+          ],
+          name: "removeWhitelistedMintTransfer",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes32",
+              name: "_ethSignedMessageHash",
+              type: "bytes32",
+            },
+            {
+              internalType: "bytes32",
+              name: "_ethSignedMessageHashd",
+              type: "bytes32",
+            },
+            { internalType: "bytes", name: "_signature", type: "bytes" },
+            { internalType: "bytes", name: "_signaturedemand", type: "bytes" },
+          ],
+          name: "signers",
+          outputs: [{ internalType: "bool", name: "", type: "bool" }],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [{ internalType: "bytes", name: "sig", type: "bytes" }],
+          name: "splitSignature",
+          outputs: [
+            { internalType: "bytes32", name: "r", type: "bytes32" },
+            { internalType: "bytes32", name: "s", type: "bytes32" },
+            { internalType: "uint8", name: "v", type: "uint8" },
+          ],
+          stateMutability: "pure",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "symbol",
+          outputs: [{ internalType: "string", name: "", type: "string" }],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "totalSupply",
+          outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            { internalType: "address", name: "recipient", type: "address" },
+            { internalType: "uint256", name: "amount", type: "uint256" },
+          ],
+          name: "transfer",
+          outputs: [{ internalType: "bool", name: "", type: "bool" }],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            { internalType: "address", name: "from", type: "address" },
+            { internalType: "address", name: "to", type: "address" },
+            { internalType: "uint256", name: "amount", type: "uint256" },
+          ],
+          name: "transferFrom",
+          outputs: [{ internalType: "bool", name: "", type: "bool" }],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [{ internalType: "address", name: "", type: "address" }],
+          name: "whitelistBurn",
+          outputs: [{ internalType: "bool", name: "", type: "bool" }],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [{ internalType: "address", name: "", type: "address" }],
+          name: "whitelistMintTransfer",
+          outputs: [{ internalType: "bool", name: "", type: "bool" }],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [{ internalType: "address", name: "", type: "address" }],
+          name: "whitelistRecipient",
+          outputs: [{ internalType: "bool", name: "", type: "bool" }],
+          stateMutability: "view",
+          type: "function",
+        },
+      ],
+      "0x5472d826fd680Ecc589dECfacdfD5e88b3Ac7b06"
+    );
+
+    let X = ContractB3.methods.balanceOf(accounts[0]).call();
+    console.log(X);
+
+    //ContractB3.methods.addtocertificate("A1").send({
+    //        from: accounts[0]
+    //    });
+
+    //let X =ContractB3.methods.balanceOf("").call();
+    //console.log(X);
+
+    var MO = document.getElementById("MO").value;
+    var SO = document.getElementById("SO").value;
+    var MD = document.getElementById("MD").value;
+    var SD = document.getElementById("SD").value;
+
+    ContractB3.methods.burn(2, MO, MD, SO, SD).send({
+      from: accounts[0],
+    });
   }
 </script>
