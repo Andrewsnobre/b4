@@ -29,7 +29,7 @@ Também foi criada uma função(loteMintDetails) onde podemos consultar os detal
 ✅ O processo de burn deve levar em conta o saldo total, independente do(s) certificado(s) que ela representa mas tentando sempre queimar o salto total de um certificado quando possível. Dessa forma, se uma wallet tiver 100 tokens de um certificado A e 10 tokens de um certificado B e for solicitado um burn de 10 tokens, privilegiar queimar os 10 do certificado B.<br/>
 R: Feito, o processo de burn leva em conta o saldo total, independente do(s) certificado(s) que ela representa e sempre tenta queimar o saldo total de um certificado antes.<br/>
 
-🏆PLUS: Transfer também tenta usar saldo total de um certificado para transferir:<br/>
+🏆PLUS: O processo de transfer também tenta usar saldo total de um certificado antes:<br/>
 O processo de transfer também leva em conta o saldo total, independente do(s) certificado(s) que ela representa e sempre tenta transferir o saldo total de um certificado.<br/>
 
 ## 📚Características do Smart Contract:<br/>
