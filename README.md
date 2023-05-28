@@ -78,7 +78,7 @@ Podemos definir qualquer tipo de regra de monitoramento, abaixo um email que rec
 <br>
 Utilitário de linting para o código Solidity nos ajudar a seguir regras rígidas enquanto desenvolvemos nosso contrato inteligente. Essas regras são úteis tanto para seguir a melhor prática padrão de estilo de código quanto para aderir às melhores abordagens de segurança.<br/><br/>
 🚦[Mocha:](https://mochajs.org/)<br/>
-Criamos um arquivo de teste unitário usando Mocha (B3secTest.js):<br/>
+Criamos um arquivo de teste unitário usando Mocha (B3secTest.js) para as principais funções:<br/>
     ✔️ deve permitir a transferência de tokens<br/>
     ✔️ deve permitir  mint de tokens<br/>
     ✔️ deve permitir a adição e remoção de endereços na lista de permissões<br/>
