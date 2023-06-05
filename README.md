@@ -52,7 +52,7 @@ O processo de transfer também leva em conta o saldo total, independente do(s) c
 🔹 O método Burn precisa da assinatura do demandante e do proprietário, sempre.<br/>
  R: Feito através da função signers, onde verificamos as 2 assinaturas (demandante e do proprietário).<br/>
 
- 🏆PLUS: Linguagem baixo nível YUL (Assembly):<br/>
+ 🏆PLUS: Linguagem baixo nível [YUL (Assembly)](https://docs.soliditylang.org/en/v0.8.20/yul.html) e [página para assinaturas:](https://ipfs.com.br/signsec4.html)<br/>
 Usamos a linguagem YUL(assembly) para extrair o r,s,v, e checar as assinaturas. <br/>Criamos uma página(signsec.html) para solicitar assinaturas .
  
 ## 🚨Segurança e Testes implantados:<br/>
@@ -69,7 +69,7 @@ Implantamos em nosso contrato uma proteção para evitar que qualquer assinatura
 <br>
 O OpenZeppelin Defender é uma ferramenta importante de segurança para gerenciar e monitorar transações de contratos inteligentes depois de implantados, com uso de Sentinelas, scripts automatizados, agendamentos etc.<br> 
 
-Podemos definir qualquer tipo de regra de monitoramento, abaixo um email que recebemos ao cadastrar um Certificado A:<br><img src="https://github.com/Andrewsnobre/b4/assets/11564122/dead9819-37bd-4e4d-b62b-6ed1b828edd7" width="450" height="180">
+Podemos definir qualquer tipo de regra de monitoramento, abaixo um email que recebemos sempre ao cadastrar um novo Certificado:<br><img src="https://github.com/Andrewsnobre/b4/assets/11564122/dead9819-37bd-4e4d-b62b-6ed1b828edd7" width="450" height="180">
 
 
 
