@@ -18,14 +18,9 @@ module.exports = {
     apiKey: process.env.ETHERSCAN_API_KEY,
   },
   gasReporter: {
-    currency: "USD",
+    enabled: true,
+    currency: "BRL",
     gasPrice: 21,
-    enabled: true,
-    coinmarketcap: process.env.COIN_MARKETCAP_API_KEY || "",
-    token: "MATIC",
-  },
-  gasReporter: {
-    enabled: true,
     coinmarketcap: process.env.COIN_MARKETCAP_API_KEY || "",
     token: "MATIC",
   },

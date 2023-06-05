@@ -64,7 +64,12 @@ contract B3sec is ERC20 {
         address recipient,
         uint256 amount,
         uint256 certificateID
-    ) external onlyWhitelistedRecipient(recipient) onlyWhitelistedMintTransfer {
+    )
+        external
+        payable
+        onlyWhitelistedRecipient(recipient)
+        onlyWhitelistedMintTransfer
+    {
         require(amount > 0, "Must be greater than zero");
         require(certificateID < certificates.length, "Invalid certificateID");
         //uint256 lotId = certificateID;
@@ -109,10 +114,9 @@ contract B3sec is ERC20 {
         string memory finalTokenUri = string(
             abi.encodePacked("data:application/json;base64,", json)
         );
-
+        lotes.push(tokenLots.length);
         tokenLots.push(TokenLot(amount, finalTokenUri));
         walletTokenBalances[recipient][certificateID] += amount;
-        lotes.push(tokenLots.length - 1);
         _mint(recipient, amount);
     }
 
@@ -168,7 +172,7 @@ contract B3sec is ERC20 {
         onlyWhitelistedMintTransfer
         returns (bool)
     {
-        require(recipient != address(0), "Transfer to zero address");
+        // require(recipient != address(0), "Transfer to zero address");
         require(amount > 0, "Must be greater than zero");
 
         uint256[] memory senderLotIds = getSortedLotIds(msg.sender);
@@ -199,7 +203,6 @@ contract B3sec is ERC20 {
             }
         }
 
-        // If there are remaining tokens to transfer, distribute them among recipient's lots
         for (
             uint256 i = recipientLotIds.length;
             i > 0 && remainingAmount > 0;
@@ -263,7 +266,7 @@ contract B3sec is ERC20 {
         whitelistRecipient[wallet] = false;
     }
 
-    function addtocertificate(string memory newValue) public onlyOwner {
+    function addtocertificate(string memory newValue) external onlyOwner {
         certificates.push(newValue);
         tokenLots.push(TokenLot(0, newValue));
         emit NewCertificate(msg.sender, newValue);
