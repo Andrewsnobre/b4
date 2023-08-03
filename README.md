@@ -1,4 +1,4 @@
-# 📝TESTE TÉCNICO B3
+# 📝PROJETO B3
 
 O Projeto foi implementado de forma completa!🎉 atendendo todos os requisitos.  <br><br/>
 Foi utilizado o Hardhat👷‍♂️ para desenvolvimento do SmartContract.<br/>
